@@ -100,7 +100,7 @@ export class ClarificationService {
     });
     
     // Add a generic risk
-    risks.push('Timeline may be affected by external factors.');
+    risks.push('Timeline may be affected');
     
     return risks;
   }
