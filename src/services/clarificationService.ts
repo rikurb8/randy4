@@ -95,7 +95,7 @@ export class ClarificationService {
     // Check for steps with multiple dependencies
     plan.steps.forEach(step => {
       if (step.dependencies && step.dependencies.length > 1) {
-        risks.push(`Step ${step.stepNumber} has multiple dependencies, which may cause delays.`);
+        risks.push(`Step ${step.stepNumber} has multiple dependencies`);
       }
     });
     
