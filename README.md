@@ -1,4 +1,3 @@
-```markdown
 # System3
 
 ## Introduction
@@ -91,4 +90,3 @@ workflow.register()
 * Predictive analytics for anticipating user needs
 * RL-based tuning of Randy's behaviors
 * Enhanced system monitoring tools
-```
