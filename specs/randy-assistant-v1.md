@@ -1,8 +1,8 @@
-Randy - AI Assistant Specification
+# Randy - AI Assistant Specification
 
 Randy is a versatile AI assistant designed to help users efficiently gather insights, create and manage plans, and clearly outline actionable next steps. It enhances productivity through clarity, adaptability, and intelligent assistance.
 
-General Overview
+## General Overview
 
 Chats with Randy are stored securely and can be accessed later, ensuring continuity and ease of reference.
 
@@ -16,9 +16,9 @@ Plan Management: Generates, edits, and tailors actionable plans.
 
 Clarity and Next Steps: Clearly summarizes plans and specifies next steps.
 
-Technical Features and Capabilities
+## Technical Features and Capabilities
 
-1. Information Exploration (Tell Me More)
+### 1. Information Exploration (Tell Me More)
 
 Description:
 
@@ -34,6 +34,7 @@ Discussing new trends or tools (e.g., AI video creation tools).
 
 Data Modeling:
 
+```
 interface InformationRequest {
   topic: string;
   subTopics?: string[];
@@ -44,8 +45,9 @@ interface InformationResponse {
   detailedExplanation: string;
   references?: string[];
 }
+```
 
-2. Plan Management (Edit or Make a Plan)
+### 2. Plan Management (Edit or Make a Plan)
 
 Description:
 
@@ -59,6 +61,7 @@ Strategy adjustment based on changing conditions (e.g., planning for adverse wea
 
 Data Modeling:
 
+```
 interface PlanRequest {
   objective: string;
   constraints?: string[];
@@ -77,8 +80,9 @@ interface PlanResponse {
   steps: ActionStep[];
   notes?: string;
 }
+```
 
-3. Clarity and Next Steps (Explain Plan)
+### 3. Clarity and Next Steps (Explain Plan)
 
 Description:
 
@@ -92,6 +96,7 @@ Recapping project objectives and upcoming tasks clearly.
 
 Data Modeling:
 
+```
 interface ClarificationRequest {
   planId: string;
   detailLevel?: 'high' | 'medium' | 'low';
@@ -102,3 +107,4 @@ interface ClarificationResponse {
   nextSteps: ActionStep[];
   highlightedRisks?: string[];
 }
+```
